@@ -10,4 +10,13 @@ public class Stock {
         this.id  = id;
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

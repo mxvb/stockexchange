@@ -17,7 +17,7 @@ public class StockRepository {
 
     }
 
-    public Stock getStockInformation(String stockId) {
+    public static Stock getStockInformation(String stockId) {
         if (!doesRepoContainStockId(stockId)) {
             throw new IllegalArgumentException("StockId does not exist BITCH.");
         }
@@ -38,5 +38,12 @@ public class StockRepository {
 
     public Stock enrichStockwithPriceInformation(String stockId, BigDecimal stockPrice) {
         return new Stock(stockId,"lalala");
+    }
+
+    @Override
+    public String toString() {
+        return "StockRepository{" +
+                "stockRepo=" + stockRepo +
+                '}';
     }
 }
