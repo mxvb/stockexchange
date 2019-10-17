@@ -19,4 +19,16 @@ public class Stock {
                 ", price=" + price +
                 '}';
     }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public StockPrice getPrice() {
+        return price;
+    }
 }

@@ -17,7 +17,7 @@ public class StockRepository {
 
     }
 
-    public static Stock getStockInformation(String stockId) {
+    public Stock getStockInformation(String stockId) {
         if (!doesRepoContainStockId(stockId)) {
             throw new IllegalArgumentException("StockId does not exist BITCH.");
         }
@@ -29,14 +29,10 @@ public class StockRepository {
     }
 
     private boolean doesRepoContainStockId(String stockId) {
-        if (this.stockRepo.containsKey(stockId)) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.stockRepo.containsKey(stockId);
     }
 
-    public Stock enrichStockwithPriceInformation(String stockId, BigDecimal stockPrice) {
+    private Stock enrichStockwithPriceInformation(String stockId, BigDecimal stockPrice) {
         return new Stock(stockId,"lalala");
     }
 
